@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.container div {
+  max-width: 600px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+}
+
+#about, #projects, #contact {
+  scroll-margin-top: 100px;
+}
+
+.perfil {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #4ea1ff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.sub {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #4ea1ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #4ea1ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #4ea1ff;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 50px 50px;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.hero-img img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}

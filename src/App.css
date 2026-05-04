@@ -1,0 +1,333 @@
+:root {
+  --bg-dark: #0b0e14;
+  --card-bg: #161b22;
+  --accent-blue: #4ea1ff;
+  --text-white: #f0f6fc;
+  --text-gray: #8b949e;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  background: rgba(11, 14, 20, 0.95);
+  border-bottom: 1px solid #30363d;
+  z-index: 1000;
+}
+
+.nav-links a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 120px 10% 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+
+.projects-section {
+  padding: 80px 5%; /* Un poco menos de margen para que entren mejor los 4 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el título y la grilla */
+}
+
+.projects-title {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left; /* O 'center' si preferís el título en el medio */
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.projects-grid {
+  display: grid;
+  /* Forzamos 4 columnas iguales */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px; /* Reducimos un poco el espacio entre tarjetas */
+  width: 100%;
+  max-width: 1400px; /* Permitimos que la sección sea un poco más ancha para los 4 */
+}
+
+.project-card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Hace que todas las tarjetas midan lo mismo */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-blue);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.project-tags span {
+  background: #21262d;
+  color: var(--accent-blue);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  border: 1px solid #30363d;
+}
+
+.repo-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Hero Section - Estilo Circular a la Derecha */
+.hero {
+  padding: 150px 10% 80px;
+  display: flex;
+  justify-content: space-between; /* Texto a la izq, foto a la der */
+  align-items: center;
+  gap: 50px; /* Espacio entre texto y foto */
+  min-height: 80vh;
+}
+
+/* Contenedor del texto */
+.hero-text-container {
+  flex: 1; /* Ocupa el espacio disponible */
+  max-width: 600px;
+}
+
+.hero-text-container h1 {
+  font-size: 3.5rem;
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+/* Contenedor de la imagen */
+.hero-image-container {
+  flex: 0 0 auto; /* No se estira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* El Marco Circular Efectivo */
+.circular-frame {
+  width: 320px;  /* Tamaño del círculo */
+  height: 320px; /* Debe ser igual al ancho */
+  border-radius: 50%; /* Hace el círculo */
+  overflow: hidden; /* Corta la imagen si sobresale */
+  border: 5px solid #161b22; /* Borde sutil */
+  box-shadow: 0 0 30px rgba(78, 161, 255, 0.2); /* Brillo azul suave */
+  transition: transform 0.3s ease;
+}
+
+.circular-frame:hover {
+  transform: scale(1.03); /* Efecto sutil al pasar el mouse */
+}
+
+/* La foto dentro del círculo */
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Importante: estira la foto sin deformarla */
+  object-position: center; /* Centra la cara */
+}
+
+/* Ajuste para celulares (Responsive) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse; /* Foto arriba, texto abajo */
+    text-align: center;
+    padding: 120px 5% 50px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .circular-frame {
+    width: 200px; /* Más pequeña en móvil */
+    height: 200px;
+  }
+}
+
+
+/* NAVBAR ESTILO PREMIUM */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  background: rgba(11, 14, 20, 0.8); /* Fondo semi-transparente */
+  backdrop-filter: blur(12px); /* Efecto de desenfoque */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Logo con estilo de código */
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+.logo-accent {
+  color: var(--accent-blue);
+  font-weight: 800;
+}
+
+/* Enlaces de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover en los enlaces comunes */
+.nav-links a:hover:not(.nav-btn-contact) {
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+/* El botón de Contacto destacado en la Navbar */
+.nav-btn-contact {
+  background: rgba(78, 161, 255, 0.1); /* Azul sutil de fondo */
+  color: var(--accent-blue) !important;
+  padding: 8px 18px;
+  border: 1px solid var(--accent-blue);
+  border-radius: 6px;
+  transition: all 0.3s ease !important;
+}
+
+.nav-btn-contact:hover {
+  background: var(--accent-blue) !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(78, 161, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Ajuste para que el contenido no quede debajo de la Navbar fija */
+.hero {
+  padding-top: 100px; /* Le damos espacio para que no lo tape la barra */
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  .nav-logo {
+    font-size: 1rem;
+  }
+}
+
+.about-section, .projects-section {
+  padding: 80px 10%; /* Esto genera el margen lateral automático */
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px; /* Evita que se estire demasiado en monitores grandes */
+  width: 100%;
+  align-items: flex-start;
+}
+
+.about-content {
+  flex: 2; /* El texto tiene más espacio */
+  text-align: left;
+}
+
+.skills-sidebar {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px; /* Evita que las tarjetas se deformen */
+}
+
+.skill-card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #4ea1ff; /* El detalle azul que se ve en tu captura */
+  text-align: left;
+}
+
+.skill-card h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text-white);
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* En móvil se pone uno abajo del otro */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
